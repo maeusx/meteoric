@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('/background.svg') fixed center no-repeat;
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2% 5% 0 5%;
+}
+
+.outlet {
+    margin-top: 3%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+nav img {
+    width: auto;
+    height: 22px;
+    filter: invert(100%);
+}
+
+nav span {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #e89d38;
+}
+
+nav ul {
+    margin-left: auto;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #e89d38;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.meteoric-text {
+    background: url('/meteoric.gif') bottom right / 200px no-repeat;
+    font-size: 1.9rem;
+    word-break: keep-all;
+}
+
+.meteoric-text h1 {
+    max-width: 66.666%;
+}
+
+.glow {
+    color: #e89d38;
+    background: linear-gradient(#ff69b4, #e89d38);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.get-started-button {
+    margin-top: 20px;
+}
+
+.music-component {
+    margin-top: 40px;
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight::before {
+    background-color: mediumslateblue;
+    z-index: -1;
+    position: absolute;
+    content: '';
+    width: calc(100% + 8px);
+    height: 25%;
+    bottom: 0;
+    left: -4px;
+}
+
+.subtitle {
+    color: #909090;
+    font-size: 1rem;
+    margin-top: -10px;
+}
+
+pre p {
+    font-size: 0.9rem;
+}
+
+pre .codeblock {
+    background-color: #121212;
+    border-radius: 6px;
+    color: #cecece;
+    padding: 5px 10px;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+pre .codeblock .component {
+    color: salmon;
+}
+
+pre .codeblock .prop {
+    color: cornflowerblue;
+}
+
+pre .codeblock .keyword {
+    color: mediumseagreen;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.links {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.glass-bg {
+    height: 500px;
+    position: relative;
+}
+
+.glass-bg::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(fuchsia, aqua);
+    clip-path: circle(60% at right 70%);
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+}
+
+.footer p {
+    font-size: 0.8rem;
+}
+
+.notfound {
+    display: grid;
+    place-items: center;
+    opacity: 0.9;
+}
+
+.notfound img {
+    width: 40%;
+}
+
+@media (max-width: 600px) {
+    nav {
+        margin-top: 10px;
+    }
+
+    nav p {
+        font-size: 0.7rem;
+    }
+
+    nav ul {
+        font-size: 0.65rem;
+    }
+
+    nav ul li a {
+        margin-left: 15px;
+    }
+
+    .meteoric-text {
+        font-size: 1.6rem;
+    }
+
+    .meteoric-text h1 {
+        max-width: 100%;
+    }
+
+    .music-component {
+        margin-top: 0;
+        transform: scale(0.6) translateX(-33.333%);
+    }
+
+    .switches {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .footer p {
+        font-size: 0.6rem;
+    }
+}
